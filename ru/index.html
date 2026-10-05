@@ -2,7 +2,7 @@
 <html lang="ru" dir="ltr">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Tomer Moshe &amp; Co | Адвокатская фирма</title>
 <meta name="description" content="Адвокатская фирма Tomer Moshe &amp; Co в Петах-Тикве: недвижимость, городское обновление, неплатёжеспособность и исполнительное производство.">
 <link rel="canonical" href="https://www.lawtmo.com/ru/">
@@ -46,13 +46,16 @@
 <div class="contact-item"><span>Телефон</span><a href="tel:+972502692223">050-2692223</a><br><a href="tel:+97235209818">03-5209818</a></div>
 <div class="contact-item"><span>E-mail</span><a href="mailto:office@lawtmo.com">office@lawtmo.com</a></div>
 </div></div>
-<form class="contact-form reveal" data-contact-form>
-<div class="field-grid"><div class="field"><label>Имя и фамилия</label><input required autocomplete="name"></div><div class="field"><label>Телефон</label><input required inputmode="tel" autocomplete="tel"></div></div>
-<div class="field"><label>E-mail</label><input type="email" autocomplete="email"></div>
-<div class="field"><label>Кратко опишите вопрос</label><textarea required></textarea></div>
-<button class="btn btn-primary" type="submit">Отправить обращение</button><div class="form-status" aria-live="polite"></div><p class="form-note">Отправка формы не создаёт отношения адвокат–клиент и не является юридической консультацией.</p>
+<form class="contact-form reveal" data-whatsapp-form data-lang="ru" novalidate>
+<input class="hp-field" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+<div class="field-grid"><div class="field"><label>Имя и фамилия</label><input name="fullName" required autocomplete="name"></div><div class="field"><label>Телефон</label><input name="phone" required inputmode="tel" autocomplete="tel"></div></div>
+<div class="field"><label>E-mail</label><input name="email" type="email" autocomplete="email"></div>
+<div class="field"><label>Кратко опишите вопрос</label><textarea name="message" required></textarea></div>
+<label class="consent-row"><input type="checkbox" name="consent" required><span>Я понимаю, что обращение будет передано в WhatsApp офиса.</span></label>
+<div class="form-actions"><button class="btn btn-primary" type="submit">Отправить в WhatsApp</button><a class="btn btn-outline-dark" data-track="email_cta" href="mailto:office@lawtmo.com">Email</a></div>
+<div class="form-status" aria-live="polite"></div><p class="form-note">Отправка обращения не создаёт отношения адвокат–клиент и не является юридической консультацией.</p>
 </form></div></section>
 </main>
 <footer><div class="container footer-grid"><div class="footer-brand"><div class="brand"><span class="brand-mark">TM</span><span class="brand-copy"><strong>Tomer Moshe & Co</strong><span>Attorneys at Law</span></span></div><p>Информация на сайте носит общий характер и не является юридической консультацией.</p></div><div class="footer-col"><h4>Контакты</h4><a href="tel:+972502692223">050-2692223</a><a href="mailto:office@lawtmo.com">office@lawtmo.com</a></div><div class="footer-col"><h4>Legal</h4><a href="./privacy/">Конфиденциальность</a><a href="./accessibility/">Доступность</a><a href="./career/">Карьера</a></div></div><div class="container footer-bottom"><span>© 2026 Tomer Moshe &amp; Co. Все права защищены.</span><span>Информация на сайте носит общий характер и не является юридической консультацией.</span></div></footer>
-<script src="../assets/site.js" defer></script>
-</body></html>
+<script src="../assets/config.js"></script><script src="../assets/site.js" defer></script>
+<a class="floating-whatsapp" data-track="whatsapp_floating" href="https://wa.me/972502692223" target="_blank" rel="noopener" aria-label="WhatsApp"><span aria-hidden="true">WA</span><strong>WhatsApp</strong></a></body></html>
