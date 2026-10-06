@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>404 | Tomer Moshe & Co.</title>
+  <style>
+    :root{color-scheme:dark;--bg:#111315;--paper:#f2eee5;--muted:#aaa69f;--gold:#d6c39e;--line:rgba(255,255,255,.13)}
+    *{box-sizing:border-box}html,body{margin:0;min-height:100%;background:var(--bg);color:var(--paper);font-family:Arial,Helvetica,sans-serif}
+    body{min-height:100vh;display:grid;grid-template-rows:auto 1fr auto}
+    a{color:inherit;text-decoration:none}.shell{width:min(1160px,calc(100% - 40px));margin:auto}
+    header{border-bottom:1px solid var(--line)}header .shell{min-height:88px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+    .brand strong{display:block;font:400 1.35rem Georgia,serif}.brand span{display:block;color:var(--muted);font-size:.72rem;margin-top:4px;letter-spacing:.08em;text-transform:uppercase}
+    .langs{display:flex;gap:8px}.langs button{appearance:none;border:1px solid var(--line);background:transparent;color:var(--paper);padding:9px 11px;cursor:pointer}
+    .langs button[aria-pressed="true"]{border-color:var(--gold);color:var(--gold)}
+    main{display:grid;align-items:center;padding:72px 0}.grid{display:grid;grid-template-columns:.65fr 1.35fr;gap:70px;align-items:start}
+    .code{font:400 clamp(5rem,13vw,11rem)/.8 Georgia,serif;color:var(--gold);letter-spacing:-.06em}
+    h1{font:400 clamp(2.8rem,6vw,5.6rem)/1 Georgia,serif;letter-spacing:-.045em;margin:0 0 24px;max-width:820px}
+    p{color:var(--muted);font-size:1.05rem;line-height:1.75;max-width:680px;margin:0 0 34px}
+    .actions{display:flex;gap:12px;flex-wrap:wrap}.btn{display:inline-flex;align-items:center;justify-content:center;padding:14px 20px;border:1px solid var(--line)}
+    .btn.primary{background:var(--gold);border-color:var(--gold);color:#171717}.btn:hover{border-color:var(--gold)}
+    footer{border-top:1px solid var(--line)}footer .shell{min-height:74px;display:flex;justify-content:space-between;align-items:center;gap:24px;color:var(--muted);font-size:.82rem}
+    @media(max-width:760px){.shell{width:calc(100% - 28px)}header .shell{min-height:78px}.grid{grid-template-columns:1fr;gap:36px}.code{font-size:5rem}main{padding:58px 0}footer .shell{padding:20px 0;align-items:flex-start;flex-direction:column}}
+  </style>
+</head>
+<body>
+<header><div class="shell"><a class="brand" data-home href="/he/"><strong>Tomer Moshe & Co.</strong><span>Law Office</span></a><div class="langs" aria-label="Language"><button data-lang="he" type="button">HE</button><button data-lang="ru" type="button">RU</button><button data-lang="en" type="button">EN</button></div></div></header>
+<main><div class="shell grid"><div class="code">404</div><div><h1 data-title>העמוד שחיפשת אינו קיים.</h1><p data-copy>ייתכן שהכתובת השתנתה או שהקישור אינו פעיל. אפשר לחזור לדף הבית או ליצור קשר עם המשרד.</p><div class="actions"><a class="btn primary" data-home data-home-label href="/he/">לדף הבית</a><a class="btn" data-contact data-contact-label href="/he/contact/">צור קשר</a></div></div></div></main>
+<footer><div class="shell"><span>© 2026 Tomer Moshe & Co.</span><a href="mailto:office@lawtmo.com">office@lawtmo.com</a></div></footer>
+<script>
+(() => {
+  const text = {
+    he:{dir:'rtl',title:'העמוד שחיפשת אינו קיים.',copy:'ייתכן שהכתובת השתנתה או שהקישור אינו פעיל. אפשר לחזור לדף הבית או ליצור קשר עם המשרד.',home:'לדף הבית',contact:'צור קשר'},
+    ru:{dir:'ltr',title:'Такой страницы нет.',copy:'Возможно, адрес изменился или ссылка устарела. Можно вернуться на главную страницу или связаться с адвокатским бюро.',home:'На главную',contact:'Связаться'},
+    en:{dir:'ltr',title:'This page could not be found.',copy:'The address may have changed or the link may no longer be active. You can return to the home page or contact the office.',home:'Home',contact:'Contact'}
+  };
+  const parts = location.pathname.split('/').filter(Boolean);
+  const onPages = location.hostname.endsWith('github.io');
+  const base = onPages && parts.length ? '/' + parts[0] + '/' : '/';
+  let lang = parts.includes('en') ? 'en' : parts.includes('ru') ? 'ru' : parts.includes('he') ? 'he' : ((navigator.language || '').toLowerCase().startsWith('ru') ? 'ru' : 'he');
+  const apply = (next) => {
+    lang=next; const c=text[lang]; document.documentElement.lang=lang; document.documentElement.dir=c.dir;
+    document.querySelector('[data-title]').textContent=c.title; document.querySelector('[data-copy]').textContent=c.copy;
+    document.querySelector('[data-home-label]').textContent=c.home; document.querySelector('[data-contact-label]').textContent=c.contact;
+    document.querySelectorAll('[data-home]').forEach((a)=>a.href=base+lang+'/');
+    document.querySelector('[data-contact]').href=base+lang+'/contact/';
+    document.querySelectorAll('[data-lang]').forEach((b)=>b.setAttribute('aria-pressed',String(b.dataset.lang===lang)));
+  };
+  document.querySelectorAll('[data-lang]').forEach((b)=>b.addEventListener('click',()=>apply(b.dataset.lang)));
+  apply(lang);
+})();
+</script>
+</body>
+</html>
