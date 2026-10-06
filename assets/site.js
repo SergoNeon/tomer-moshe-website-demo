@@ -67,8 +67,20 @@
     if (window.gtag) window.gtag('event', name, params);
   }
 
-  if (!document.querySelector('.floating-whatsapp')) {
-    const whatsapp = document.createElement('a');
+  let whatsapp = document.querySelector('.floating-whatsapp, .floating-wa');
+
+  if (whatsapp && whatsapp.classList.contains('floating-wa')) {
+    whatsapp.classList.remove('floating-wa');
+    whatsapp.classList.add('floating-whatsapp');
+    whatsapp.dataset.track = 'whatsapp_floating';
+    whatsapp.target = '_blank';
+    whatsapp.rel = 'noopener';
+    whatsapp.setAttribute('aria-label', 'WhatsApp');
+    whatsapp.innerHTML = '<strong>WhatsApp</strong>';
+  }
+
+  if (!whatsapp) {
+    whatsapp = document.createElement('a');
     whatsapp.className = 'floating-whatsapp';
     whatsapp.dataset.track = 'whatsapp_floating';
     whatsapp.href = 'https://wa.me/972502692223';

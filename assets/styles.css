@@ -187,3 +187,6 @@ footer{background:#0c0d0f}.footer-grid{padding:68px 0}.footer-col h4{color:#c6ad
   .floating-whatsapp{inset-inline-end:12px;bottom:12px;padding:11px 13px}
   .floating-whatsapp strong{display:block}
 }
+
+/* Legacy WhatsApp button is upgraded by site.js */
+.floating-wa{display:none}
