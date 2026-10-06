@@ -62,3 +62,36 @@ footer{background:#0b0c0c;color:#aaa59a;border-top:1px solid rgba(255,255,255,.0
 @media(max-width:560px){.profile-practice-grid,.profile-contact-row{grid-template-columns:1fr}.attorney-strip{grid-template-columns:1fr}.attorney-strip img{width:100px;height:100px}.profile-hero{padding-top:36px}}
 
 .attorney-hero{min-height:620px;display:grid;grid-template-columns:1.05fr .95fr;gap:70px;align-items:center}.attorney-photo img{width:100%;max-width:460px;margin-inline:auto;aspect-ratio:4/5;object-fit:cover;border-radius:28px;border:1px solid rgba(184,148,82,.45);box-shadow:var(--shadow)}.section-subtitle{font-family:Georgia,serif;font-size:1.6rem;font-weight:500;margin:0 0 18px}@media(max-width:850px){.attorney-hero{grid-template-columns:1fr;min-height:auto;padding:70px 0}.attorney-photo{order:-1}.attorney-photo img{max-width:340px}}
+
+
+/* 2026 professional law firm redesign */
+:root{
+  --ink:#111315;
+  --ink-soft:#1b1e22;
+  --paper:#f3f0e8;
+  --paper-2:#e9e3d8;
+  --gold:#8a744c;
+  --gold-strong:#a48b5e;
+  --line:rgba(17,19,21,.14);
+  --muted:#66615a;
+  --white:#fffdf8;
+  --shadow:0 24px 70px rgba(0,0,0,.10);
+  --radius:0;
+  --max:1280px;
+}
+body{font-family:Arial,"Noto Sans Hebrew",sans-serif;background:var(--paper);color:var(--ink);line-height:1.55}
+body[dir="rtl"]{font-family:"Noto Sans Hebrew",Arial,sans-serif}
+.container{width:min(var(--max),calc(100% - 64px));margin-inline:auto}
+header{background:rgba(17,19,21,.985);backdrop-filter:none;border-bottom:1px solid rgba(255,255,255,.12)}
+.nav{min-height:92px;gap:36px}.brand{gap:0}.brand-mark{display:none!important}.brand-copy strong{font-family:Georgia,"Times New Roman",serif;font-size:1.35rem;font-weight:500;letter-spacing:.01em}.brand-copy span{font-size:.63rem;letter-spacing:.2em;color:#98958f;margin-top:4px}.nav-links{gap:31px;font-size:.88rem}.nav-links a{color:#e7e3db}.nav-cta{border:0;border-bottom:1px solid var(--gold-strong);border-radius:0;padding:7px 0;color:#f0e8d9!important}.lang{border:0;border-radius:0;padding:0;gap:0}.lang a{border-radius:0;padding:7px 9px;border-inline-start:1px solid rgba(255,255,255,.12)}.lang a[aria-current="page"]{background:transparent;color:#fff;border-bottom:1px solid var(--gold-strong)}
+.hero,.page-hero{background:#111315}.hero:before,.hero:after,.page-hero:after{display:none!important}.hero-grid{min-height:760px;grid-template-columns:1.05fr .95fr;gap:96px}.hero h1,.page-hero h1{font-family:Georgia,"Times New Roman",serif;font-weight:400;letter-spacing:-.04em}.hero h1{font-size:clamp(4rem,7vw,7rem);line-height:.94;margin:24px 0 32px}.hero h1 em{color:#d6c39e}.hero-lead,.page-hero p{color:#c8c5be;max-width:760px}.portrait-card:before{display:none}.portrait-card{max-width:none}.portrait-card img{width:100%;aspect-ratio:4/5;border-radius:0;object-fit:cover;filter:none}.portrait-label{inset-inline-start:0;bottom:0;border-radius:0;box-shadow:none;background:rgba(17,19,21,.9);color:white;border-top:1px solid rgba(255,255,255,.16);padding:20px 22px}.portrait-label span{color:#bbb7af}.btn{border-radius:0;padding:15px 21px;letter-spacing:.02em}.btn-primary{background:#d0bd95;color:#171717}.btn-primary:hover{background:#ddcba7;transform:none}.btn-ghost{border-color:rgba(255,255,255,.32)}
+.eyebrow{font-size:.68rem;letter-spacing:.2em;color:var(--gold);gap:14px}.eyebrow:before{width:52px;background:var(--gold)}
+.trust-strip{background:#17191c}.trust-grid{grid-template-columns:repeat(4,1fr)}.trust-item{padding:30px 26px}.trust-item strong{font-family:Arial,sans-serif;font-size:.95rem;text-transform:uppercase;letter-spacing:.08em;color:#eee9df}.trust-item span{margin-top:6px;display:block;color:#9e9a92}
+.section{padding:120px 0}.section-tight{padding:76px 0}.section-head{grid-template-columns:.8fr 1.2fr;gap:110px;margin-bottom:62px}.section-head h2,.about-copy h2,.contact-copy h2,.content-intro h2{font-family:Georgia,"Times New Roman",serif;font-weight:400;letter-spacing:-.035em}.section-head h2{font-size:clamp(2.8rem,5vw,5rem)}
+.practice-grid,.detail-grid{gap:0;border-top:1px solid var(--line)}.practice,.detail-card{background:transparent;border:0;border-bottom:1px solid var(--line);border-radius:0;min-height:auto;padding:34px 10px 36px}.practice{border-inline-end:1px solid var(--line)}.practice:nth-child(3n){border-inline-end:0}.practice:after{display:none}.practice:hover{transform:none;box-shadow:none;background:rgba(255,255,255,.35)}.practice .num{display:none}.practice h3{font-family:Georgia,serif;font-size:1.45rem;font-weight:400;margin:0 0 12px}.practice p{font-size:.92rem}.detail-card h3{margin:6px 0 0;font-size:1.2rem}.detail-dot{display:none}
+.about-grid{gap:110px}.quote-box{border-radius:0;background:#17191c;border:0;border-left:3px solid var(--gold);padding:48px}.quote-box blockquote{font-weight:400}.article-grid{gap:1px;background:var(--line);border:1px solid var(--line)}.article{border:0;border-radius:0;background:var(--paper);padding:36px;min-height:320px}.article.featured{background:#17191c}.careers{border-radius:0;background:#17191c;border:0;padding:54px}
+.contact-form{border-radius:0;background:#f8f6f1;padding:40px}.field input,.field textarea{border-radius:0;background:white}.contact-grid{gap:96px}.contact-item{border-bottom:1px solid rgba(255,255,255,.16)}
+footer{background:#0c0d0f}.footer-grid{padding:68px 0}.footer-col h4{color:#c6ad7d}.footer-col a{color:#d6d1c7}
+.page-hero-grid{min-height:560px;grid-template-columns:1fr;max-width:980px}.page-monogram{display:none!important}.content-layout{grid-template-columns:.65fr 1.35fr;gap:120px}.lead-paragraph{font-family:Georgia,serif;font-size:clamp(1.45rem,2.3vw,2.1rem);font-weight:400;color:#27231f}.attorney-hero{min-height:720px;grid-template-columns:1fr .82fr;gap:110px}.attorney-photo img{border-radius:0;border:0;box-shadow:none;max-width:none;aspect-ratio:4/5}.section-subtitle{font-family:Georgia,serif;font-weight:400}
+@media(max-width:980px){.container{width:min(var(--max),calc(100% - 36px))}.nav{min-height:78px}.nav-links{inset:78px 0 auto 0}.hero-grid,.attorney-hero{grid-template-columns:1fr;gap:46px;padding:72px 0}.portrait-wrap,.attorney-photo{width:100%;max-width:620px}.trust-grid{grid-template-columns:1fr 1fr}.section-head,.about-grid,.contact-grid,.content-layout{grid-template-columns:1fr;gap:46px}.practice-grid{grid-template-columns:1fr 1fr}.practice:nth-child(3n){border-inline-end:1px solid var(--line)}.practice:nth-child(2n){border-inline-end:0}}
+@media(max-width:650px){.container{width:calc(100% - 28px)}.hero h1{font-size:clamp(3.1rem,15vw,4.7rem)}.section{padding:84px 0}.practice-grid,.detail-grid,.article-grid{grid-template-columns:1fr}.practice{border-inline-end:0!important}.trust-grid{grid-template-columns:1fr}.portrait-label{position:static;background:#17191c}.lang{display:none}.brand-copy strong{font-size:1.12rem}}
